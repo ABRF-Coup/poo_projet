@@ -60,15 +60,15 @@ private Connection connection;
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        TEXT_Cycle = new javax.swing.JTextField();
         TEXT_Niveau = new javax.swing.JTextField();
         BUT_CREER_Etudiant = new javax.swing.JButton();
+        jComboBox_Etudiant = new javax.swing.JComboBox<>();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        TEXT_statut_Enseignant = new javax.swing.JTextField();
         BUT_CREER_Enseigant = new javax.swing.JButton();
+        jComboBox_Enseignant = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
@@ -77,11 +77,11 @@ private Connection connection;
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         TEXT_Salaire = new javax.swing.JTextField();
-        TEXT_satatut_Agent = new javax.swing.JTextField();
         TEXT_Categorie = new javax.swing.JTextField();
         TEXT_Indicesalaire = new javax.swing.JTextField();
         TEXT_Occupation = new javax.swing.JTextField();
         BUT_CEERAGENT = new javax.swing.JButton();
+        jComboBox_Agent = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -193,6 +193,8 @@ private Connection connection;
             }
         });
 
+        jComboBox_Etudiant.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Licence", "Ingenieur" }));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -206,8 +208,8 @@ private Connection connection;
                             .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 71, Short.MAX_VALUE))
                         .addGap(43, 43, 43)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(TEXT_Cycle)
-                            .addComponent(TEXT_Niveau, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)))
+                            .addComponent(TEXT_Niveau, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                            .addComponent(jComboBox_Etudiant, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(BUT_CREER_Etudiant, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -224,7 +226,7 @@ private Connection connection;
                 .addGap(29, 29, 29)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(TEXT_Cycle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_Etudiant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -249,24 +251,27 @@ private Connection connection;
             }
         });
 
+        jComboBox_Enseignant.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Permanent", "Vacataire" }));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(TEXT_statut_Enseignant, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addComponent(BUT_CREER_Enseigant, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jComboBox_Enseignant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,8 +281,8 @@ private Connection connection;
                 .addGap(52, 52, 52)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(TEXT_statut_Enseignant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                    .addComponent(jComboBox_Enseignant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(BUT_CREER_Enseigant, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -320,6 +325,8 @@ private Connection connection;
             }
         });
 
+        jComboBox_Agent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Permanent", "Temporaire", "Stagiaire" }));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -340,9 +347,9 @@ private Connection connection;
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(TEXT_Categorie, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
                                     .addComponent(TEXT_Salaire)
-                                    .addComponent(TEXT_satatut_Agent)
                                     .addComponent(TEXT_Indicesalaire)
-                                    .addComponent(TEXT_Occupation))))
+                                    .addComponent(TEXT_Occupation)
+                                    .addComponent(jComboBox_Agent, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addContainerGap(75, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -363,10 +370,10 @@ private Connection connection;
                     .addComponent(jLabel14)
                     .addComponent(TEXT_Salaire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(TEXT_satatut_Agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jComboBox_Agent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16)
                     .addComponent(TEXT_Categorie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -430,8 +437,7 @@ private Connection connection;
     }// </editor-fold>//GEN-END:initComponents
 
     private void BUT_CREER_EtudiantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUT_CREER_EtudiantActionPerformed
-        // TODO add your handling code here:
-      try {
+    try {
     int code = Integer.parseInt(TEXT_Code.getText());
     String nom_saisi = TEXT_Nom.getText();
     String Date_Nais = TEXT_Date.getText();
@@ -443,12 +449,17 @@ private Connection connection;
     String adress = TEXT_Address.getText();
     String email = TEXT_Email.getText();
     int Tel = Integer.parseInt(TEXT_TelNumber.getText());
-    String cycle = TEXT_Cycle.getText();
+    String cycle = jComboBox_Etudiant.getSelectedItem().toString();// Convertir en minuscules pour éviter les erreurs de casse
     int Niveau = Integer.parseInt(TEXT_Niveau.getText());
     
     // Vérifier si tous les champs sont non nuls
     if (code == 0 || nom_saisi.isEmpty() || Date_Nais.isEmpty() || adress.isEmpty() || email.isEmpty() || cycle.isEmpty()) {
         throw new IllegalArgumentException("Tous les champs doivent être renseignés.");
+    }
+    
+    // Vérifier que le cycle est soit "licence" soit "ingenieur"
+    if (!cycle.equals("Licence") && !cycle.equals("Ingenieur")) {
+        throw new IllegalArgumentException("Le cycle doit être soit 'licence' soit 'ingenieur'.");
     }
     
     Etudiant C  = new Etudiant(code,nom_saisi,sqlDateNaissance,adress,email,Tel,cycle,Niveau);
@@ -466,7 +477,7 @@ private Connection connection;
     e.printStackTrace();
     JOptionPane.showMessageDialog(null, "ENREGISTREMENT ENTRAVE....");
 } catch (IllegalArgumentException e) {
-    // Gérer l'exception lorsque tous les champs ne sont pas renseignés
+    // Gérer l'exception lorsque tous les champs ne sont pas renseignés ou si le cycle n'est pas valide
     e.printStackTrace();
     JOptionPane.showMessageDialog(null, "ENREGISTREMENT ENTRAVE....");
 }
@@ -495,13 +506,15 @@ private Connection connection;
     String adress = TEXT_Address.getText();
     String email = TEXT_Email.getText();
     int Tel = Integer.parseInt(TEXT_TelNumber.getText());
-    String statut = TEXT_statut_Enseignant.getText();
+    String statut = jComboBox_Enseignant.getSelectedItem().toString();
 
     // Vérifier si tous les champs sont non nuls
     if (code == 0 || nom_saisi.isEmpty() || Date_Nais.isEmpty() || adress.isEmpty() || email.isEmpty() || statut.isEmpty()) {
         throw new IllegalArgumentException("Tous les champs doivent être renseignés.");
     }
-
+    if (!statut.equals("Vacataire") && !statut.equals("Permanent")) {
+        throw new IllegalArgumentException("Le statut doit être soit 'Vacataire' soit 'Permanent'.");
+    }
     Enseignant C = new Enseignant(code, nom_saisi, sqlDateNaissance, adress, email, Tel, statut);
 
     C.insererDansBaseDeDonnees();
@@ -543,7 +556,7 @@ private Connection connection;
     int Tel = Integer.parseInt(TEXT_TelNumber.getText());
 
     double salaire = Double.parseDouble(TEXT_Salaire.getText());
-    String statut = TEXT_satatut_Agent.getText();
+    String statut = jComboBox_Agent.getSelectedItem().toString();
     int IndiceSalaire = Integer.parseInt(TEXT_Indicesalaire.getText());
     String categorie = TEXT_Categorie.getText();
     String occupation = TEXT_Occupation.getText();
@@ -551,6 +564,9 @@ private Connection connection;
     // Vérifier si tous les champs sont non nuls
     if (code == 0 || nom_saisi.isEmpty() || Date_Nais.isEmpty() || adress.isEmpty() || email.isEmpty() || statut.isEmpty() || categorie.isEmpty() || occupation.isEmpty()) {
         throw new IllegalArgumentException("Tous les champs doivent être renseignés.");
+    }
+    if (!statut.equals("Stagiaire") && !statut.equals("Permanent") && !statut.equals("Temporaire")) {
+        throw new IllegalArgumentException("Le statut doit être soit 'Temporaire' soit 'Permanent' soit 'Stagiaire'.");
     }
 
     Agent C = new Agent(code, nom_saisi, sqlDateNaissance, adress, email, Tel, salaire, statut, categorie, IndiceSalaire, occupation);
@@ -565,6 +581,7 @@ private Connection connection;
     // Gérer l'exception liée à l'interaction avec la base de données
     e.printStackTrace();
      JOptionPane.showMessageDialog(null, "ENREGISTREMENT ENTRAVE....");
+     
 } catch (IllegalArgumentException e) {
     // Gérer l'exception lorsque tous les champs ne sont pas renseignés
     e.printStackTrace();
@@ -638,7 +655,6 @@ private Connection connection;
     private javax.swing.JTextField TEXT_Address;
     private javax.swing.JTextField TEXT_Categorie;
     private javax.swing.JTextField TEXT_Code;
-    private javax.swing.JTextField TEXT_Cycle;
     private javax.swing.JTextField TEXT_Date;
     private javax.swing.JTextField TEXT_Email;
     private javax.swing.JTextField TEXT_Indicesalaire;
@@ -647,8 +663,9 @@ private Connection connection;
     private javax.swing.JTextField TEXT_Occupation;
     private javax.swing.JTextField TEXT_Salaire;
     private javax.swing.JTextField TEXT_TelNumber;
-    private javax.swing.JTextField TEXT_satatut_Agent;
-    private javax.swing.JTextField TEXT_statut_Enseignant;
+    private javax.swing.JComboBox<String> jComboBox_Agent;
+    private javax.swing.JComboBox<String> jComboBox_Enseignant;
+    private javax.swing.JComboBox<String> jComboBox_Etudiant;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
